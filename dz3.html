@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DZ3</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // За допомогою prompt запитати як звуть користувача. 
+    // За допомогою alert вивести "Hello, John! How are you?", де John це те, що ввів користувач
+    const name = prompt('Whats your name?')
+    alert(`Hello, ${name}! How are you?`)
+    // END 
+
+
+    // Створити скрипт для складання, віднімання, множення та поділу двох чисел та виведення результатів
+    const num1 = 562;
+    const num2 = 24;
+
+    let addition = num1 + num2;
+    console.log('Складання:' + addition);
+
+    let subtraction = num1 - num2;
+    console.log('Віднімання:' + subtraction);
+
+    let multiplication = num1 * num2;
+    console.log('Множення:' + multiplication);
+
+    let division = num1 / num2;
+    console.log('Ділення:' + division);
+    // END 
+
+
+    // Створити скрипт, який отримує два значення і виводить true, якщо значення рівні, false - якщо ні
+    const value1 = prompt("Перше значення:");
+    const value2 = prompt("Друге значення:");
+
+    if (value1 === value2) {
+        alert(true);
+    } else {
+        alert(false);
+    }
+    // END 
+
+
+    // Визначити середнє арифметичне трьох чисел
+    const numberFive1 = 12;
+    const numberFive2 = 28;
+    const numberFive3 = 55;
+
+    const average = (numberFive1 + numberFive2 + numberFive3) / 3;
+
+    console.log('Середнє арифметичне:' + average);
+    // END 
+
+    // Розкласти по цифрах п'ятизначне число і вивести у вихідному порядку через пробіл 
+    // (використовувати оператор “розподіл по модулю” (%)
+
+    const numberFive = 12345;
+
+    const individualNum1 = Math.floor(numberFive / 10000);
+    const individualNum2 = Math.floor((numberFive % 10000) / 1000);
+    const individualNum3 = Math.floor((numberFive % 1000) / 100);
+    const individualNum4 = Math.floor((numberFive % 100) / 10);
+    const individualNum5 = numberFive % 10;
+
+    console.log(individualNum1 + " " + individualNum2 + " " + individualNum3 + " " + individualNum4 + " " + individualNum5);
+    // END 
+</script>
+</html>
