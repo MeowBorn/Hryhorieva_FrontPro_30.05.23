@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DZ 8</title>
+</head>
+<body>
+</body>
+<script>
+
+    const array = [16, -37, 54, -4, 72, -56, 47, 4, -16, 25, -37, 46, 4, -51, 27, -63, 4, -54, 76, -4, 12, -35, 4, 47];
+    let sum1 = 0;
+    let count = 0;
+
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] > 0) {
+            sum1 += array[i];
+            count++;
+        }
+    }
+
+    console.log('Cума:', sum1);
+    console.log('Кількість:', count);
+
+
+    // 
+    const array2 = [2, 8, 34, 1, 67, 4, 12];
+    let minElement = array2[0];
+    let minIndex = 0;
+
+    for (let i = 1; i < array2.length; i++) {
+        if (array2[i] < minElement) {
+            minElement = array2[i];
+            minIndex = i;
+        }
+    }
+
+    console.log('Мінімальний елемент:', minElement);
+    console.log('Індекс:', minIndex);
+    
+    //
+    const array3 = [2, 8, 34, 1, 67, 4, 12];
+    let maxElement = array3[0];
+    let maxIndex = 0;
+
+    for (let i = 1; i < array3.length; i++) {
+        if (array3[i] > maxElement) {
+            maxElement = array3[i];
+            maxIndex = i;
+        }
+    }
+
+    console.log('Максимальний елемент:', maxElement);
+    console.log('Індекс:', maxIndex);
+
+    //
+    const array4 = [16, -37, 54, -4, 72, -56, 47, 4, -16, -98];
+    let count2 = 0;
+
+    for (let i = 0; i < array4.length; i++) {
+        if (array4[i] < 0) {
+            count2++;
+        }
+    }
+
+    console.log('Кількість негативних елементів', count2);
+
+    //
+    const array5 = [16, -37, 54, -4, 72, -56, 47, 4, -16, -98];
+    let count3 = 0;
+
+    for (let i = 0; i < array5.length; i++) {
+        if (array5[i] > 0 && array5[i] % 2 !== 0) {
+            count3++;
+        }
+    }
+
+    console.log('Непарні позитивні елементи:', count3);
+
+    //
+    const array6 = [16, -37, 54, -4, 72, -56, 47, 4, -16, -98];
+    let count4 = 0;
+
+    for (let i = 0; i < array6.length; i++) {
+        if (array6[i] > 0 && array6[i] % 2 === 0) {
+            count4++;
+        }
+    }
+
+    console.log('Парні позитивні елементи:', count4);
+
+    //
+    const array7 = [16, -37, 54, -4, 72, -56, 47, 4, -16, -98];
+    let sum2 = 0;
+
+    for (let i = 0; i < array7.length; i++) {
+        const element = array7[i];
+        if (element > 0 && element % 2 === 0) {
+            sum2 += element;
+        }
+    }
+
+    console.log('Cума парних позитивних елементів:', sum2);
+
+    //
+    const array8 = [16, -37, 54, -4, 72, -56, 47, 4, -16, -98, 3];
+    let sum3 = 0;
+
+    for (let i = 0; i < array8.length; i++) {
+        const element = array8[i];
+        if (element > 0 && element % 2 !== 0) {
+            sum3 += element;
+        }
+    }
+
+    console.log('Cума непарних позитивних елементів:', sum3);
+
+    //
+    const array9 = [16, -37, 54, -4, 72, -56, 47, 4, -16, -98];
+    let product = 1;
+
+    for (let i = 0; i < array9.length; i++) {
+        const element = array9[i];
+        if (element > 0) {
+            product *= element;
+        }
+    }
+
+    console.log('Добуток позитивних елементів:', product);
+
+    //
+    const array10 = [16, -37, 54, -4, 72, -56, 47, 4, -16, -98];
+
+    let maxElement2 = array10[0];
+    for (let i = 1; i < array10.length; i++) {
+        if (array10[i] > maxElement2) {
+            maxElement2 = array10[i];
+        }
+    }
+
+    for (let i = 0; i < array10.length; i++) {
+        if (array10[i] !== maxElement2) {
+            array10[i] = 0;
+        }
+    }
+
+    console.log('Найбільший серед елементів масиву:', array10);
+
+</script>
+</html>
