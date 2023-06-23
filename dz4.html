@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DZ4</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+    const birthYear = prompt('Введіть рік вашого народження:');
+    const city = prompt('В якому місті ви мешкаєте?');
+    const favoriteSport = prompt('Який ваш улюблений вид спорту?');
+
+    if (birthYear === null || birthYear === "" || birthYear === NaN) {
+        alert('Шкода, що Ви не захотіли ввести свій рік народження');
+    }
+    if (city === null || city === "") {
+        alert('Шкода, що Ви не захотіли ввести своє місто проживання');
+    }
+    if (favoriteSport === null || favoriteSport === "") {
+        alert('Шкода, що Ви не захотіли ввести свій улюблений вид спорту');
+    }
+
+    const currentYear = new Date().getFullYear();
+    const age = currentYear - parseInt(birthYear);
+    let ageMessage = `Ваш возраст: ${age}\n`;
+
+    let cityMessage = "";
+
+    if (city === 'Київ' || city === 'київ') {
+        cityMessage += 'Ти живеш у столиці України\n';
+    } else if (city === 'Вашингтон' || city === 'вашингтон') {
+        cityMessage += 'Ти живеш у столиці Америки\n';
+    } else if (city === 'Лондон' || city === 'лондон') {
+        cityMessage += 'Ти живеш у столиці Англії\n';
+    } else if (city === null || city === "") {
+            
+    }
+    else {
+        cityMessage += `Ти живеш у місті ${city}\n`;
+    }
+
+
+    let sportMessage = "";
+    if (favoriteSport === 'Футбол' || favoriteSport === 'футбол') {
+        sportMessage += 'Круто! Хочеш стати як Месі';
+    } else if (favoriteSport ==='Баскетбол' || favoriteSport === 'баскетбол') {
+        sportMessage += 'Круто! Хочеш стати як Джордан';
+    } else if (favoriteSport === 'Теніс' || favoriteSport === 'теніс') {
+        sportMessage += 'Круто! Хочеш стати як Рафаэль';
+    }
+
+    const message = `${ageMessage}${cityMessage}${sportMessage}`;
+    alert(message);
+
+
+
+</script>
+</html>
