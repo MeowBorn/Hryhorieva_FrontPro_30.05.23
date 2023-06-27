@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+    // Дано два різні числа. Визначити, яке з них більше, а яке менше.
+    const num1 = 3;
+    const num2 = 7;
+
+    const maxNum = num1 > num2 ? num1 : num2;
+    const minNum = num1 < num2 ? num1 : num2;
+    console.log('Більше:', maxNum);
+    console.log('Менше:', minNum);
+    
+    // Відомі дві відстані. Одне у кілометрах, інше – у футах (1 фут = 0,305м). Яка відстань менша?
+    let km = 12; 
+    let ft = 32;
+    let convertFt = ft * 0.305;
+
+    if (km < convertFt) {
+        console.log('Відстань в км менше');
+    } else if (km > convertFt) {
+        console.log('Відстань в фт менше');
+    } else {
+        console.log('Відстані рівні');
+    }
+
+    // Визначити, чи є число a дільником числа b? І навпаки. (Дати дві відповіді)
+    function isDivisor(a, b) {
+        return b % a === 0 ? true : false;
+    }
+
+    const a = 2;
+    const b = 9;
+
+    console.log(a + (isDivisor(a, b) ? 'є дільником ' : ' не є дільником ') + b);
+    console.log(b + (isDivisor(b, a) ? 'є дільником ' : ' не є дільником ') + a);
+
+    // Дано число. Визначити, чи закінчується воно парною цифрою чи непарною? Вивести останню цифру.
+    const number1 = 637;
+    
+    function checkNumEvenOdd(number1) {
+        const lastNum = number1 % 10; 
+        const checkNum = lastNum % 2 === 0;
+
+        const message = checkNum
+        ? 'Закінчується парною'
+        : 'Закінчується непарною цифрою';
+
+        console.log(message);
+        console.log('Остання цифра ' + lastNum);
+    }
+
+    checkNumEvenOdd(number1);
+
+    // Дано двозначне число. Визначити, яка з його цифр більша: перша чи друга?
+    const number2 = 47;
+
+    function compareDigits(number2) {
+        const firstDigit = Math.floor(number2 / 10);
+        const secondDigit = number2 % 10;
+
+        const message = firstDigit > secondDigit
+        ? 'Перша цифра більша за другу'
+        : (firstDigit < secondDigit ? 'Друга цифра більша за першу' : 'Перша та друга цифри рівні');
+
+        console.log(message);
+    }
+
+    compareDigits(number2);
+
+   // Дано тризначне число
+   // Визначити чи є парною сума його цифр.
+   // Визначити, чи кратна сума цифр п'яти.
+   // Визначити чи є добуток його цифр більше 100
+
+    const number3 = 456;
+    
+    function sum(number3) {
+        const hundreds = Math.floor(number3 / 100); 
+        const tens = Math.floor((number3 % 100) / 10); 
+        const ones = number3 % 10;
+
+        const sum = hundreds + tens + ones; 
+        const product = hundreds * tens * ones; 
+
+        console.log(sum % 2 === 0 ? 'Сума цифр є парною' : 'Сума цифр є не парною');
+        console.log(sum % 5 === 0 ? 'Сума цифр кратна числу 5' : 'Сума цифр не кратна числу 5');
+        console.log(product > 100 ? 'Добуток цифр більше 100' : 'Добуток цифр не більше 100');
+    }
+
+    sum(number3);
+
+
+    // Дано тризначне число.
+    // Чи правда, що всі цифри однакові?
+    // Чи є серед цифр цифри однакові?
+    function sameDigits(number4) {
+        const digits = String(number4).split('');
+
+        const hasDuplicates = digits.some((digit, index) => digits.indexOf(digit) !== index);
+        const allSame = digits.every(digit => digit === digits[0]);
+
+        const hasDuplicatesMessage = hasDuplicates ? 'Серед цифр є однакові' : 'Серед цифр немає однакових';
+        const allSameMessage = allSame ? 'Усі цифри однакові' : 'Не всі цифри однакові';
+
+        console.log(hasDuplicatesMessage);
+        console.log(allSameMessage);
+    }
+
+    const number4 = 122;
+    sameDigits(number4);
+
+
+    // Визначити, чи є задане шестизначне число дзеркальним? (123321, 147741) 
+    function mirrorNum(number) {
+        const numberStr = String(number);
+        const length = numberStr.length;
+
+        for (let i = 0; i < length / 2; i++) {
+            if (numberStr[i] !== numberStr[length - 1 - i]) {
+            return false;
+            }
+        }
+
+        return true;
+    }
+
+    const num1Mirror = 123321;
+    const num2Mirror = 147741;
+
+    console.log('Чи є задане шестизначне число дзеркальним? ' + mirrorNum(num1Mirror)); 
+    console.log('Чи є задане шестизначне число дзеркальним? ' + mirrorNum(num2Mirror));
+
+
+</script>
+</html>
