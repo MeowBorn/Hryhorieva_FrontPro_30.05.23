@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dz22</title>
+
+    <style>
+        td {
+            border: 1px solid #000;
+            padding: 8px;
+        }
+    </style>
+    
+    
+</head>
+
+<body>
+    <div id='container__table'></div>
+</body>
+
+<script>
+    const table = document.createElement('table');
+
+    for (let i = 1; i <= 10; i++) {
+        const row = document.createElement('tr');
+        
+        for (let a = 1; a <= 10; a++) {
+            const cell = document.createElement('td');
+            const cellNum = document.createTextNode((i - 1) * 10 + a);
+            cell.appendChild(cellNum);
+            row.appendChild(cell);
+        }
+        
+        table.appendChild(row);
+    }
+
+    const tableContainer = document.getElementById('container__table');
+    tableContainer.appendChild(table);
+
+</script>
+</html>
