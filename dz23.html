@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dz23</title>
+
+    <style>
+        img {
+            width: 100%;
+        }
+    </style>
+
+</head>
+
+<body>
+    
+    <img id="randomImg" src="img">
+
+</body>
+
+<script>
+    const img = ['1.webp', '2.webp', '3.webp', '4.webp', '5.webp', '6.webp'];
+    const randomIndex = Math.floor(Math.random() * img.length);
+    const randomImgPath = 'img/' + img[randomIndex];
+    const randomImgElem = document.getElementById('randomImg');
+    randomImgElem.src = randomImgPath;
+</script>
+
+</html>
