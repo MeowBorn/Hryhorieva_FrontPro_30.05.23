@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dz26</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+const options = [
+  { name: '🙂', count: 0 },
+  { name: '🫠', count: 0 },
+  { name: '😩', count: 0 },
+  { name: '🚬', count: 0 },
+  { name: '☕️', count: 0 },
+  { name: '🤭', count: 0 },
+];
+
+function createVote() {
+    const container = document.createElement('div');
+
+    options.forEach(option => {
+        const optionElement = document.createElement('span');
+        optionElement.textContent = option.name;
+
+        const counterElement = document.createElement('span');
+        counterElement.className = 'counter';
+        counterElement.textContent = option.count;
+
+        optionElement.appendChild(counterElement);
+        container.appendChild(optionElement);
+
+        optionElement.addEventListener('click', () => {
+            option.count++;
+            counterElement.textContent = option.count;
+        });
+        
+    });
+  
+  document.body.appendChild(container);
+}
+
+createVote();
+
+</script>
+</html>

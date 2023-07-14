@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dz25</title>
+</head>
+<body>
+    <button onclick='buttonClick(1)'>Натиснути</button>
+    <button onclick='buttonClick(2)'>Натиснути</button>
+</body>
+<script>
+     
+    function redirectLink(link) {
+        link = addProtocol(link);
+        window.location.href = link;
+    }
+
+    function addProtocol(link) {
+        if (!link.startsWith('http://') && !link.startsWith('https://')) {
+            link = 'http://' + link;
+        }
+        return link;
+    }
+
+    function buttonClick(buttonIndex) {
+        if (buttonIndex === 1) {
+            const link1 = prompt('Перше посилання:');
+            redirectLink(link1);
+        } else if (buttonIndex === 2) {
+            const link2 = prompt('Друге посилання:');
+            redirectLink(link2);
+        }
+    }
+
+</script>
+</html>
